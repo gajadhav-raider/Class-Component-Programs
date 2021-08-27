@@ -1,0 +1,21 @@
+const { Component } = require("react");
+const React = require("react");
+class User extends Component {
+    handleinput= ()=>{
+        console.log('How Are You ?',this);
+    }
+    render(){
+     
+        return (<>
+        <h1>Hi Rani </h1>
+        <input type='button' value="Click Me" style={{fontSize : "18px"}} onClick={this.handleinput}></input></>
+)  
+  }
+}
+export default User;
+
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import User from './User';
+ReactDOM.render(<User roll={10}/>,document.getElementById('root'));

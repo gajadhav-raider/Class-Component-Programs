@@ -1,0 +1,30 @@
+//User.js
+const { Component } = require("react");
+const React = require("react");
+class User extends Component {
+constructor(props){
+    super(props);
+    this.state = {
+        name:this.props.name,
+        roll:this.props.roll
+    }
+}
+    handleinput = ()=>{
+        console.log('How Are You ?',this);
+        this.setState({name:"Vishal",roll:45});
+    }
+    render(){
+        return (<>
+        <h1>Hi {this.state.name} My roll Number is {this.state.roll} </h1>
+        
+        <input type='button' value="Click Me" style={{fontSize : "18px"}} onClick={this.handleinput}></input></>
+)  
+  }
+}
+export default User;
+
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import User from './User';
+ReactDOM.render(<User roll={10} name="Rani"/>,document.getElementById('root'));

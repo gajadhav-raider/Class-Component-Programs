@@ -1,0 +1,20 @@
+   //Create Class Component
+import React, { Component } from 'react';
+
+class User extends Component {
+    render(){
+        return <h1>Hello World</h1>
+    }
+}
+export default User;
+//render(index.js) the Component on root of the index.html
+import React from 'react';
+import ReactDOM from 'react-dom';
+// import User from './User';
+ReactDOM.render(
+  <React.StrictMode>
+    <User />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+

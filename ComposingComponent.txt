@@ -1,0 +1,37 @@
+//Component User.js
+import React, { Component } from 'react';
+
+class User extends Component {
+    render(){
+        return <h1>My Name is { this.props.name}</h1>
+    }
+}
+export default User;
+//App.js
+import './App.css';
+import User from './User';
+function App() {
+  return (
+    <div>
+      <User name="Gaurav"/> 
+      <User name="Maina"/>
+      <User name="Rani"/>
+    </div>
+  );
+}
+
+export default App;
+
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+// import User from './User';
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+

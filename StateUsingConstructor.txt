@@ -1,0 +1,21 @@
+''User.js
+import React, { Component } from 'react'
+class User extends Component {
+   constructor(props){
+       super(props);
+       this.state={
+           name:"Rani",
+           roll:this.props.roll
+       }
+   }
+    render(){
+        return <h1>Hi {this.state.name} My roll is {this.state.roll}</h1>
+    }
+}
+export default User;
+
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import User from './User';
+ReactDOM.render(<User roll={10}/>,document.getElementById('root'));

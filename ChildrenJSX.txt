@@ -1,0 +1,16 @@
+import React, { Component } from 'react';
+
+class User extends Component
+{
+    render(){
+        return <h1>Hi team {this.props.children}</h1>
+    }
+}
+
+export default User;
+
+//index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import User from './User'
+ReactDOM.render(<User> Hello Everyone</User>,document.getElementById('root'));
